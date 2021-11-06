@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url:  http://moeyua.github.io/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -33,6 +33,7 @@ skip_render:
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
+auto_spacing: true # Auto add spacing between chineses and english
 titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
@@ -115,7 +116,9 @@ feed:
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/Moeyua/moeyua.github.io
+  branch: gh-pages
 suka_theme:
   search:
     enable: true
