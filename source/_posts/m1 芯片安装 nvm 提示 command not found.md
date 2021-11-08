@@ -21,6 +21,7 @@ touch ~/.bash_profile
 ```
 创建完根据文档的说法是需要再运行一次安装命令，之后 `source ~./bash_profile` 让配置生效即可。
 > If you use bash, the previous default shell, your system may not have a .bash_profile file where the command is set up. Create one with `touch ~/.bash_profile` and run the install script again. Then, run `source ~/.bash_profile` to pick up the nvm command.
+
 执行完上述操作后好像没什么问题了，那么试一下 `nvm`，ok 成功了。
 
 ***

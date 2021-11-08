@@ -1,6 +1,7 @@
 ---
 title: 使用RSS在推荐算法中获取主动权
 date: 2021-01-30 21:25:53
+thumbnail: https://i.loli.net/2021/11/08/2twzCmYRlW8u6AB.png
 tags: 
     - RSS
 ---

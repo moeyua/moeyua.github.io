@@ -2,6 +2,7 @@
 title: 如何在 JavaScript 完美的确定一个数据的类型
 date: 2021-11-03 19:02:53
 tags: 
+  - 技术向
   - JavaScript
 ---
 
