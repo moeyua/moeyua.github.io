@@ -8,6 +8,7 @@ tags:
     - nvm 
 thumbnail: https://i.loli.net/2021/11/08/vhZXDgKMU46aYiI.png
 ---
+<!-- more -->
 迫于需要维护公司一个比较老的项目，所以在配置 macOS 环境的时候选择了使用 `nvm` 来管理多个 `node`，但是根据 nvm 官方文档的说法：
 
 >January 2021: there are no pre-compiled NodeJS binaries for versions prior to 15.x for Apple's new M1 chip (arm64 architecture).

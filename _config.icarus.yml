@@ -112,9 +112,18 @@ navbar:
         About: /about
     # Links to be shown on the right of the navigation bar
     links:
-        Download on GitHub:
+        Github:
             icon: fab fa-github
-            url: 'https://github.com/ppoffice/hexo-theme-icarus'
+            url: 'https://github.com/moeyua'
+        Facebook:
+            icon: fab fa-facebook
+            url: 'https://facebook.com'
+        Twitter:
+            icon: fab fa-twitter
+            url: 'https://twitter.com'
+        RSS:
+            icon: fas fa-rss
+            url: /
 # Page footer configurations
 footer:
     # Links to be shown on the right of the footer section
@@ -239,21 +248,21 @@ widgets:
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: 'https://github.com/moeyua'
+        # follow_link: 'https://github.com/moeyua'
         # Links to be shown on the bottom of the profile widget
-        social_links:
-            Github:
-                icon: fab fa-github
-                url: 'https://github.com/moeyua'
-            Facebook:
-                icon: fab fa-facebook
-                url: 'https://facebook.com'
-            Twitter:
-                icon: fab fa-twitter
-                url: 'https://twitter.com'
-            RSS:
-                icon: fas fa-rss
-                url: /
+        # social_links:
+        #     Github:
+        #         icon: fab fa-github
+        #         url: 'https://github.com/moeyua'
+        #     Facebook:
+        #         icon: fab fa-facebook
+        #         url: 'https://facebook.com'
+        #     Twitter:
+        #         icon: fab fa-twitter
+        #         url: 'https://twitter.com'
+        #     RSS:
+        #         icon: fas fa-rss
+        #         url: /
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
