@@ -3,11 +3,11 @@ version: 4.0.0
 # Icarus theme variant, can be "default" or "cyberpunk"
 variant: default
 # Path or URL to the website's logo
-logo: /img/logo.svg
+logo: https://i.loli.net/2021/11/11/luLsADZJ1BogN4v.jpg
 # Page metadata configurations
 head:
     # URL or path to the website's icon
-    favicon: /img/favicon.svg
+    favicon: https://i.loli.net/2021/11/11/luLsADZJ1BogN4v.jpg
     # Web application manifests configuration
     # https://developer.mozilla.org/en-US/docs/Web/Manifest
     manifest:
@@ -163,7 +163,9 @@ search:
 comment:
     type: disqus
     # Disqus shortname
-    shortname: ''
+    shortname: moeyua
+    api: https://disqus.skk.moe/disqus/
+    apikey: JvTbkrooah0gU1J8CvQggoSppgZMguq1adXLxooY5nEoWr5G7enVrkM5yGR47LlL
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
@@ -188,12 +190,12 @@ donates:
         # URL to the Patreon page
         url: ''
     # Paypal donate button configurations
-    -
-        type: paypal
-        # Paypal business ID or email address
-        business: ''
-        # Currency code
-        currency_code: USD
+    # -
+    #     type: paypal
+    #     # Paypal business ID or email address
+    #     business: ''
+    #     # Currency code
+    #     currency_code: USD
     # Wechat donate button configurations
     -
         type: wechat
@@ -201,10 +203,10 @@ donates:
         qrcode: ''
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
-share:
-    type: sharethis
-    # URL to the ShareThis share plugin script
-    install_url: ''
+# share:
+#     type: sharethis
+#     # URL to the ShareThis share plugin script
+#     install_url: ''
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -225,40 +227,37 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: Your name
+        author: Moeyua
         # Author title
-        author_title: Your title
+        author_title: 因为美观才是第一生产力
         # Author's current location
-        location: Your location
+        location: 
         # URL or path to the avatar image
-        avatar: 
+        avatar: https://i.loli.net/2021/11/11/luLsADZJ1BogN4v.jpg
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: 'https://github.com/ppoffice'
+        follow_link: 'https://github.com/moeyua'
         # Links to be shown on the bottom of the profile widget
         social_links:
             Github:
                 icon: fab fa-github
-                url: 'https://github.com/ppoffice'
+                url: 'https://github.com/moeyua'
             Facebook:
                 icon: fab fa-facebook
                 url: 'https://facebook.com'
             Twitter:
                 icon: fab fa-twitter
                 url: 'https://twitter.com'
-            Dribbble:
-                icon: fab fa-dribbble
-                url: 'https://dribbble.com'
             RSS:
                 icon: fas fa-rss
                 url: /
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: toc
         # Whether to show the index of each heading
         index: true
@@ -267,14 +266,14 @@ widgets:
         # Maximum level of headings to show (1-6)
         depth: 3
     # Recommendation links widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: links
-        # Names and URLs of the sites
-        links:
-            Hexo: 'https://hexo.io'
-            Bulma: 'https://bulma.io'
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: links
+    #     # Names and URLs of the sites
+    #     links:
+    #         Hexo: 'https://hexo.io'
+    #         # Bulma: 'https://bulma.io'
     # Categories widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
@@ -283,7 +282,7 @@ widgets:
     # Recent posts widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
-        position: left
+        position: right
         type: recent_posts
     # Archives widget configurations
     -
@@ -296,34 +295,34 @@ widgets:
         position: left
         type: tags
     # Google FeedBurner email subscription widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: subscribe_email
-        # Hint text under the email input
-        description: 
-        # Feedburner ID
-        feedburner_id: ''
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: subscribe_email
+    #     # Hint text under the email input
+    #     description: 
+    #     # Feedburner ID
+    #     feedburner_id: ''
     # Google AdSense unit configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: adsense
-        # AdSense client ID
-        client_id: ''
-        # AdSense AD unit ID
-        slot_id: ''
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: adsense
+    #     # AdSense client ID
+    #     client_id: ''
+    #     # AdSense AD unit ID
+    #     slot_id: ''
     # Follow.it email subscription widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: left
-        type: followit
-        # Hint text under the email input
-        description: 
-        # Subscription form action URL
-        action_url: ''
-        # Feed claiming verification code
-        verification_code: ''
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: left
+    #     type: followit
+    #     # Hint text under the email input
+    #     description: 
+    #     # Subscription form action URL
+    #     action_url: ''
+    #     # Feed claiming verification code
+    #     verification_code: ''
 # Plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
