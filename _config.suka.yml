@@ -72,7 +72,7 @@ footer:
 # ---------------------------------------------------------------
 uiux:
   # Muilt line slogan is supported.
-  slogan: 技术，哲学，笔记，随想，我的一切。
+  slogan: 技术，哲学，笔记，随想，摸鱼。
   # For most link color except post color
   link_color:
   primary_color:
@@ -158,9 +158,9 @@ toc:
 # If you want to use gitment or gitalk, you should get the client_id and client_secret form https://github.com/settings/applications/new
 # If you want to use valine, you should get the app_id and app_key form https://leancloud.cn , more setting please see https://valine.js.org
 comment:
-  use:
-  disqus:
-    shortname: # disqus shortname
+  use: disqus_click
+  disqus: 
+    shortname: moeyua # disqus shortname
   disqusjs:
     shortname:
     siteName:
