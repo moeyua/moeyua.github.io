@@ -46,15 +46,15 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: ''
-  wrap: true
+  wrap: false
   hljs: false
 prismjs:
   enable: false
-  preprocess: true
-  line_number: true
+  preprocess: false
+  line_number: false
   tab_replace: ''
 
 # Home page setting
@@ -112,5 +112,5 @@ suka_theme:
     field: post # Page | Post | All. Default post
   prism:
     enable: false
-    line_number: true
+    line_number: false
     theme: default

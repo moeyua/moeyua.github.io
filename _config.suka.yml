@@ -80,7 +80,7 @@ uiux:
   bg_color:
 
 img:
-  avatar: '/img/default_avatar.png'
+  avatar: https://i.loli.net/2021/11/11/luLsADZJ1BogN4v.jpg
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -100,6 +100,8 @@ nav:
     use: true
     link: /search
   pages:
+    标签:
+      link: /tags
     #About:
       #link: /about/
     #Friends:
@@ -280,7 +282,7 @@ valine_counter:
 # Available value of "use":
 #     local | google | swiftype
 search:
-  use: local
+  use: google
   # Swiftype
   swiftype_key:
 
@@ -298,7 +300,7 @@ search:
 #     enable: true
 #
 highlight:
-  theme: github
+  theme: monokai
   # You can only enable the Suka built in prettify theme here. Check the /source/css/highlight directories.
   # The theme name is the css file name without `.min.css`, as [theme-name].min.css
 
@@ -312,7 +314,7 @@ highlight:
 #     tab_replace: false
 #
 hanabi:
-  enable: false
+  enable: true
 
 # Prism
 # To use prism, you need to disable all highlight option in hexo's site config.
