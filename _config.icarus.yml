@@ -105,22 +105,19 @@ head:
 navbar:
     # Navigation menu items
     menu:
-        Home: /
-        Archives: /archives
-        Categories: /categories
-        Tags: /tags
-        About: /about
+        首页: /
+        归档: /archives
+        分类: /categories
+        标签: /tags
+        # About: /about
     # Links to be shown on the right of the navigation bar
     links:
         Github:
             icon: fab fa-github
             url: 'https://github.com/moeyua'
-        Facebook:
-            icon: fab fa-facebook
-            url: 'https://facebook.com'
         Twitter:
             icon: fab fa-twitter
-            url: 'https://twitter.com'
+            url: 'https://twitter.com/EvodMoeyua'
         RSS:
             icon: fas fa-rss
             url: /
@@ -136,7 +133,7 @@ footer:
             url: 'https://creativecommons.org/licenses/by/4.0/'
         Download on GitHub:
             icon: fab fa-github
-            url: 'https://github.com/ppoffice/hexo-theme-icarus'
+            url: 'https://github.com/moeyua'
 # Article related configurations
 article:
     # Code highlight settings
@@ -222,11 +219,11 @@ sidebar:
     # Left sidebar configurations
     left:
         # Whether the sidebar sticks to the top when page scrolls
-        sticky: false
+        sticky: true
     # Right sidebar configurations
     right:
         # Whether the sidebar sticks to the top when page scrolls
-        sticky: false
+        sticky: true
 # Sidebar widget configurations
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
 widgets:

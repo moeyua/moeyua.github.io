@@ -1,11 +1,16 @@
 ---
 title: Cookie？小饼干！
 date: 2021-11-02 15:09:53
+toc: true
+cover: https://i.loli.net/2021/11/11/eF3LsfChNlcpYQn.jpg
+thumbnail: https://i.loli.net/2021/11/11/eF3LsfChNlcpYQn.jpg
 tags: 
     - Cookie
     - 浏览器
 ---
 
+虽然在浏览网页的时候经常看到 Cookie 这个词汇，但是好像几乎没有人知道是做什么的呢。
+<!--more-->
 ## 概述
 Cookie，又称“小甜饼”，指某些网站为了辨别用户身份而储存在用户本地终端（通常为用户的浏览器）上的数据（通常经过加密）。
 

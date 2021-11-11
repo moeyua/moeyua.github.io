@@ -1,6 +1,9 @@
 ---
 title: 如何在 JavaScript 完美的确定一个数据的类型
 date: 2021-11-03 19:02:53
+toc: true
+cover: https://i.loli.net/2021/11/11/pbeTzf1ZRjnSHow.jpg
+thumbnail: https://i.loli.net/2021/11/11/pbeTzf1ZRjnSHow.jpg
 tags: 
   - 技术向
   - JavaScript
@@ -10,9 +13,8 @@ JavaScript 中有三种方式来确定一个数据的类型：
 - `typeof` 运算符
 - `instanceof` 运算符
 - `Object.prototype.toString()` 方法  
-
 这里就来简单梳理一下这三种方式的优劣，同时得出一个能够完美判断数据类型的方法。
-
+<!--more-->
 # typeof
 `typeof` 很简单，下面是一个简单的例子：
 

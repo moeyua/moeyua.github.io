@@ -1,10 +1,16 @@
 ---
 title: m1 芯片安装 nvm 提示 command not found
 date: 2021-11-05 23:13:53
+toc: true
+cover: https://i.loli.net/2021/11/11/Ik5ApguqxtB4n63.jpg
+thumbnail: https://i.loli.net/2021/11/11/Ik5ApguqxtB4n63.jpg
 tags: 
     - nvm
 ---
 最近新购入了一台 M1 的 MacBook Air，作为一个合格的程序员自然是先配置环境，但是没想到第一个安装的 nvm 上来就给了我当头一棒。
+
+<!--more-->
+
 首先根据 [nvm](https://github.com/nvm-sh/nvm#manual-install)给出的文档下载：
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash

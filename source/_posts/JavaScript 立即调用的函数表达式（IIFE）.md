@@ -1,8 +1,8 @@
 ---
 title: JavaScript 立即调用的函数表达式（IIFE）
 date: 2021-11-10 15:25:10
-thumbnail: https://i.loli.net/2021/11/10/lyv9CGnA1eutpbx.jpg
-cover: https://i.loli.net/2021/11/10/lyv9CGnA1eutpbx.jpg
+thumbnail: https://i.loli.net/2021/11/11/5i3CUWQf9uZHzpc.jpg
+cover: https://i.loli.net/2021/11/11/5i3CUWQf9uZHzpc.jpg
 tags: 
     - JavaScript
     - 技术向

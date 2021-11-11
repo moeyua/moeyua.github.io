@@ -1,8 +1,14 @@
 ---
 title: Markdown笔记
 date: 2021-01-25 21:25:53
+toc: true
+cover: https://i.loli.net/2021/11/11/J4ZpySqXrIPQ6jV.jpg
+thumbnail: https://i.loli.net/2021/11/11/J4ZpySqXrIPQ6jV.jpg
 tags: 笔记
 ---
+
+写博客当然要用 MarkDown 啦，但是在这之前先得学一学怎么用才行啊。
+<!--more-->
 # Markdown笔记
 
 <!-- TOC -->
