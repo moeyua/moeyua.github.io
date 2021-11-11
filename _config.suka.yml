@@ -158,14 +158,14 @@ toc:
 # If you want to use gitment or gitalk, you should get the client_id and client_secret form https://github.com/settings/applications/new
 # If you want to use valine, you should get the app_id and app_key form https://leancloud.cn , more setting please see https://valine.js.org
 comment:
-  use: disqus_click
+  use: disqusjs
   disqus: 
-    shortname: moeyua # disqus shortname
+    shortname: moeyua 
   disqusjs:
-    shortname:
-    siteName:
-    api:
-    apikey:
+    shortname: moeyua
+    siteName: Moeyua's Blog
+    api: https://disqus.skk.moe/disqus/
+    apikey: JvTbkrooah0gU1J8CvQggoSppgZMguq1adXLxooY5nEoWr5G7enVrkM5yGR47LlL
     admin:
     adminLabel:
   changyan:
