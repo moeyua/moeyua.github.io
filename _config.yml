@@ -65,6 +65,19 @@ deploy:
   type: git
   repo: https://github.com/Moeyua/moeyua.github.io
   branch: gh-pages
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 0
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: https://i.loli.net/2021/11/11/luLsADZJ1BogN4v.jpg
+  autodiscovery: true
+  template:
 suka_theme:
   search:
     enable: true
