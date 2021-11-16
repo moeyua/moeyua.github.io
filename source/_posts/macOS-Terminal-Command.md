@@ -3,6 +3,7 @@ title: macOS Terminal Command
 toc: true
 tags:
   - macOS
+  - Terminal
 date: 2021-11-16 13:31:30
 cover: https://i.loli.net/2021/11/16/1uKe4fRLcDQWr6d.png
 thumbnail: https://i.loli.net/2021/11/16/1uKe4fRLcDQWr6d.png
