@@ -5,10 +5,10 @@ toc: true
 cover: https://i.loli.net/2021/11/11/Tj8IhRfzvtbPMV9.jpg
 thumbnail: https://i.loli.net/2021/11/11/Tj8IhRfzvtbPMV9.jpg
 tags: 
-    - 技术向
     - macOS
     - node
     - nvm 
+categories: 疑难杂症
 ---
 迫于需要维护公司一个比较老的项目，所以在配置 macOS 环境的时候选择了使用 `nvm` 来管理多个 `node`，但是遇到了一些问题。
 <!-- more -->

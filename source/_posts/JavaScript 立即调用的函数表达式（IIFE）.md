@@ -6,6 +6,7 @@ cover: https://i.loli.net/2021/11/11/5i3CUWQf9uZHzpc.jpg
 tags: 
     - JavaScript
     - 技术向
+categories: 技术文档
 ---
 最近工作一直很闲，导师姐姐看我没事做就安排我看一下公司的项目，顺便让我画一份登陆的流程图来（摸鱼不好吗，流泪了）。  
 <!-- more -->

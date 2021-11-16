@@ -7,6 +7,7 @@ thumbnail: https://i.loli.net/2021/11/11/eF3LsfChNlcpYQn.jpg
 tags: 
     - Cookie
     - 浏览器
+categories: 技术文档
 ---
 
 虽然在浏览网页的时候经常看到 Cookie 这个词汇，但是好像几乎没有人知道是做什么的呢。

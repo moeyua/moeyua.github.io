@@ -5,7 +5,9 @@ toc: true
 cover: https://i.loli.net/2021/11/11/Ik5ApguqxtB4n63.jpg
 thumbnail: https://i.loli.net/2021/11/11/Ik5ApguqxtB4n63.jpg
 tags: 
+    - m1 chip
     - nvm
+categories: 疑难杂症
 ---
 最近新购入了一台 M1 的 MacBook Air，作为一个合格的程序员自然是先配置环境，但是没想到第一个安装的 nvm 上来就给了我当头一棒。
 

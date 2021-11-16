@@ -5,8 +5,8 @@ toc: true
 cover: https://i.loli.net/2021/11/11/pbeTzf1ZRjnSHow.jpg
 thumbnail: https://i.loli.net/2021/11/11/pbeTzf1ZRjnSHow.jpg
 tags: 
-  - 技术向
   - JavaScript
+categories: 技术文档
 ---
 
 JavaScript 中有三种方式来确定一个数据的类型：
