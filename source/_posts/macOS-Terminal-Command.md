@@ -25,5 +25,15 @@ lsof -i :port
 ``` zsh
 kill -9 :port
 ```
+# 压缩文件
+```
+zip -q -r filename.zip filename
+```
+`-q` 表示不显示执行指令过程；  
+`-r` 表示递归压缩目录下所有文件和目录，如果不添加 `-r` 则会导致只压缩一个空的目录。  
+压缩文件的路径并不一定要在本目录下，位置和名称都可以随意修改，例如：
+```
+zip -q -r ~/Desktop/newfile.zip filename
+```
 
 

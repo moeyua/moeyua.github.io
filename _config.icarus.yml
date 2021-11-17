@@ -219,7 +219,7 @@ sidebar:
     # Left sidebar configurations
     left:
         # Whether the sidebar sticks to the top when page scrolls
-        sticky: true
+        sticky: false
     # Right sidebar configurations
     right:
         # Whether the sidebar sticks to the top when page scrolls
@@ -260,17 +260,6 @@ widgets:
         #     RSS:
         #         icon: fas fa-rss
         #         url: /
-    # Table of contents widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: toc
-        # Whether to show the index of each heading
-        index: true
-        # Whether to collapse sub-headings when they are out-of-view
-        collapsed: true
-        # Maximum level of headings to show (1-6)
-        depth: 3
     # Recommendation links widget configurations
     # -
     #     # Where should the widget be placed, left sidebar or right sidebar
@@ -285,12 +274,23 @@ widgets:
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: categories
+    # Table of contents widget configurations
+    -
+        # Where should the widget be placed, left sidebar or right sidebar
+        position: right
+        type: toc
+        # Whether to show the index of each heading
+        index: true
+        # Whether to collapse sub-headings when they are out-of-view
+        collapsed: true
+        # Maximum level of headings to show (1-6)
+        depth: 3
+        # Archives widget configurations
     # Recent posts widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: right
         type: recent_posts
-    # Archives widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: left

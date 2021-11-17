@@ -29,3 +29,10 @@ categories: 笔记
 
 - 删除分支
 - `git branch -d (branchname)`
+
+- 提交新建的分支
+- `git push --set-upstream origin (branchname)`
+
+## 提交
+- 撤回上次提交（commit）
+- `git reset --soft HEAD^

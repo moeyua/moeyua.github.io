@@ -18,3 +18,8 @@ hexo g --watch
 > Hexo 能够监视文件变动并立即重新生成静态文件，在生成时会比对文件的 SHA1 checksum，只有变动的文件才会写入。  
 
 上面是 hexo 官方给出的命令解释，也就是说虽然 `hexo s` 不能够帮我们监视文件变化，那么我们就自己来监视。只需要在 `hexo s` 之前启动一个 `hexo g --watch` 就能解决这个问题了。
+
+<a class="tag is-dark is-medium" href="https://www.pixiv.net/artworks/94130143" target="_blank">
+<span class="icon"><i class="fas fa-camera"></i></span>&nbsp;&nbsp;
+Cover by あんよ＠お仕事募集中
+</a>
