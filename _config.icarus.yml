@@ -191,10 +191,10 @@ donates:
         # URL to the "Buy me a coffee" page
         url: 'buymeacoffee.com/moeyua'
     # Patreon donate button configurations
-    # -
-    #     type: patreon
-    #     # URL to the Patreon page
-    #     url: ''
+    -
+        type: patreon
+        # URL to the Patreon page
+        url: 'https://www.patreon.com/moeyua'
     # Paypal donate button configurations
     # -
     #     type: paypal
