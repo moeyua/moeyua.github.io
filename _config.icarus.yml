@@ -115,6 +115,9 @@ navbar:
         Github:
             icon: fab fa-github
             url: 'https://github.com/moeyua'
+        Telegram:
+                icon: fab fa-telegram
+                url: 'https://t.me/Meoyua'
         Twitter:
             icon: fab fa-twitter
             url: 'https://twitter.com/EvodMoeyua'
@@ -251,9 +254,9 @@ widgets:
             Github:
                 icon: fab fa-github
                 url: 'https://github.com/moeyua'
-            # Facebook:
-            #     icon: fab fa-facebook
-            #     url: 'https://facebook.com'
+            Telegram:
+                icon: fab fa-telegram
+                url: 'https://t.me/Meoyua'
             Twitter:
                 icon: fab fa-twitter
                 url: 'https://twitter.com/EvodMoeyua'
