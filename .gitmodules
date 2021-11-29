@@ -1,3 +1,6 @@
 [submodule "themes/icarus"]
 	path = themes/icarus
 	url = https://github.com/ppoffice/hexo-theme-icarus.git
+[submodule "themes/anatole"]
+	path = themes/anatole
+	url = git@github.com:Moeyua/hexo-theme-Anatole.git

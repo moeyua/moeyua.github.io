@@ -60,12 +60,7 @@ pagination_dir: page
 include: null
 exclude: null
 ignore: null
-theme: anatole
-archive_generator:
-  per_page: 0  
-  yearly: false
-  monthly: false
-  daily: false
+theme: icarus
 deploy:
   type: git
   repo: https://github.com/Moeyua/moeyua.github.io
