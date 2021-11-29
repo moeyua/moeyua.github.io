@@ -1,14 +1,11 @@
 ---
 title: {{ title }}
 date: {{ date }}
-toc: true
-cover: 
-thumbnail: 
+# 这里是对此文章的描述，有利于收录
+desc: 
+# 这里是文章摘要
+summary: 
 categories: 
 tags: 
  -
 ---
-<a class="tag is-dark is-medium" href="https://example.com" target="_blank">
-<span class="icon"><i class="fas fa-camera"></i></span>&nbsp;&nbsp;
-Cover by {author}
-</a>

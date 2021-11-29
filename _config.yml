@@ -76,9 +76,9 @@ feed:
   path: atom.xml
   limit: 0
   hub:
-  content:
-  content_limit: 140
-  content_limit_delim: ' '
+  content: true
+  content_limit: 
+  content_limit_delim: 
   order_by: -date
   icon: https://i.loli.net/2021/11/11/luLsADZJ1BogN4v.jpg
   autodiscovery: true
