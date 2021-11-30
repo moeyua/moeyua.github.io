@@ -5,8 +5,6 @@ tags:
   - hexo
   - JavaScript
 date: 2021-11-18 18:45:17
-cover: https://i.loli.net/2021/11/18/iduBvGAtEJ7ekFf.jpg
-thumbnail: https://i.loli.net/2021/11/18/iduBvGAtEJ7ekFf.jpg
 categories: 技术文档
 ---
 看到苏卡卡大佬的 profile 上有一个统计所有文章的字数功能，感觉很有意思，于是本菜鸡也决定给自己搞一个。
@@ -276,10 +274,3 @@ function getWords(site) {
 
 最后放一张完成后的截图：
 ![](https://i.loli.net/2021/11/18/lKHOfbvDzoE3Tj5.png)
-
-
-
-<a class="tag is-dark is-medium" href="https://www.pixiv.net/artworks/93745405" target="_blank">
-<span class="icon"><i class="fas fa-camera"></i></span>&nbsp;&nbsp;
-Cover by Lifeline
-</a>

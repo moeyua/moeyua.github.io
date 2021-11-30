@@ -1,9 +1,6 @@
 ---
 title: m1 芯片安装 nvm 提示 command not found
 date: 2021-11-05 23:13:53
-toc: true
-cover: https://i.loli.net/2021/11/11/Ik5ApguqxtB4n63.jpg
-thumbnail: https://i.loli.net/2021/11/11/Ik5ApguqxtB4n63.jpg
 tags: 
     - m1 chip
     - nvm

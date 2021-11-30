@@ -1,9 +1,6 @@
 ---
 title: 解决 nvm 无法在 arm 架构下安装 V15 以下的 node 版本 的问题
 date: 2021-11-08 18:08:02
-toc: true
-cover: https://i.loli.net/2021/11/11/Tj8IhRfzvtbPMV9.jpg
-thumbnail: https://i.loli.net/2021/11/11/Tj8IhRfzvtbPMV9.jpg
 tags: 
     - macOS
     - node

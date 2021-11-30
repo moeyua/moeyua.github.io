@@ -1,9 +1,6 @@
 ---
 title: Git 使用笔记
 date: 2021-11-01 17:25:53
-toc: true
-cover: https://i.loli.net/2021/11/11/Yfq1o7FIGxaNip8.jpg
-thumbnail: https://i.loli.net/2021/11/11/Yfq1o7FIGxaNip8.jpg
 tags: Git
 categories: 笔记
 ---

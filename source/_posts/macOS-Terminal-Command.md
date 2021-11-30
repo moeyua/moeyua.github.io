@@ -1,12 +1,9 @@
 ---
 title: macOS Terminal Command
-toc: true
 tags:
   - macOS
   - Terminal
 date: 2021-11-16 13:31:30
-cover: https://i.loli.net/2021/11/16/1uKe4fRLcDQWr6d.png
-thumbnail: https://i.loli.net/2021/11/16/1uKe4fRLcDQWr6d.png
 categories: 笔记
 ---
 换了 macOS 自然是离不开 Terminal 的，正好乘次机会把在学校没学好的 Linux 命令补回来。

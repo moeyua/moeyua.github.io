@@ -1,9 +1,6 @@
 ---
 title: Cookie？小饼干！
 date: 2021-11-02 15:09:53
-toc: true
-cover: https://i.loli.net/2021/11/11/eF3LsfChNlcpYQn.jpg
-thumbnail: https://i.loli.net/2021/11/11/eF3LsfChNlcpYQn.jpg
 tags: 
     - Cookie
     - 浏览器

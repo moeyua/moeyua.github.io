@@ -1,11 +1,8 @@
 ---
 title: hexo 无法在本地实时预览
-toc: true
 tags:
   - hexo
 date: 2021-11-16 17:24:09
-cover: https://i.loli.net/2021/11/16/Gfx3jSCbEqXYBRQ.png
-thumbnail: https://i.loli.net/2021/11/16/Gfx3jSCbEqXYBRQ.png
 categories: 疑难杂症
 ---
 
