@@ -18,3 +18,11 @@ hexo s --debug
 ```zsh
 hexo g -d
 ```
+
+# 分类 categories
+- 随便写点 
+- 他山之石
+- 言論
+- 技术文档
+- 疑难杂症
+- 笔记
