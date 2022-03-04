@@ -33,4 +33,9 @@ zip -q -r filename.zip filename
 zip -q -r ~/Desktop/newfile.zip filename
 ```
 
+# 移动文件
+将 `dir1` 移动到 `dir2` 目录下，如果 dir2 不存在则会将 `dir1` 重命名为 `dir2`
+```
+mv dir1 dir2
+```
 
