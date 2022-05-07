@@ -5,7 +5,7 @@ tags:
   - IndexedDB
   - JavaScript
 date: 2022-01-14 22:48:32
-summary: 本文是 RxDB 文档 Opinions 部分的文章「Why IndexedDB is slow and what to use instead」的翻译，原作者为 pubkey。
+summary: 本文是 RxDB 文档 Opinions 部分的文章《Why IndexedDB is slow and what to use instead》的翻译，原作者为 pubkey。
 categories: 译文
 ---
 
