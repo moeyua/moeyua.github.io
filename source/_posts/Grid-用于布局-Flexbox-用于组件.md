@@ -1,5 +1,5 @@
 ---
-title: 'Grid 用于布局, Flexbox 用于组件'
+title: '【译文】Grid 用于布局, Flexbox 用于组件'
 desc: blog html css javascript js vue macOS 前端 frontEnd
 tags:
   - CSS
