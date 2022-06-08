@@ -1,12 +1,12 @@
 title: Moeyua's Blog
-subtitle: 
-description: ''
+subtitle:
+description: ""
 keywords: null
 author: Moeyua
 language: zh-CN
 timezone: Asia/Shanghai
 url: http://moeyua.github.io/
-permalink: ':year/:month/:day/:title/'
+permalink: ":year/:month/:day/:title/"
 permalink_defaults: null
 pretty_urls:
   trailing_index: true
@@ -17,16 +17,16 @@ tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: ':lang'
+i18n_dir: ":lang"
 skip_render: null
-new_post_name: ':title.md'
+new_post_name: ":title.md"
 default_layout: post
 auto_spacing: true
 titlecase: false
 external_link:
   enable: true
   field: site
-  exclude: ''
+  exclude: ""
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -36,18 +36,18 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace: ''
+  tab_replace: ""
   wrap: false
   hljs: false
 prismjs:
   enable: false
   preprocess: false
   line_number: false
-  tab_replace: ''
+  tab_replace: ""
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
-  order_by: '-date'
+  order_by: "-date"
 default_category: uncategorized
 category_map: null
 tag_map: null
@@ -62,7 +62,7 @@ exclude: null
 ignore: null
 theme: anatole
 archive_generator:
-  per_page: 0  
+  per_page: 0
   yearly: false
   monthly: false
   daily: false
@@ -77,8 +77,8 @@ feed:
   limit: 0
   hub:
   content: true
-  content_limit: 
-  content_limit_delim: 
+  content_limit:
+  content_limit_delim:
   order_by: -date
   icon: https://i.loli.net/2021/11/11/luLsADZJ1BogN4v.jpg
   autodiscovery: true
