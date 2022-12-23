@@ -1,6 +1,6 @@
-title: Moeyua's Blog
+title: Moeyua
 author: Moeyua
-language: zh-CN
+language: zh-cn
 timezone: Asia/Shanghai
 url: http://moeyua.github.io/
 theme: typography
@@ -8,7 +8,7 @@ theme: typography
 # deploy
 deploy:
   type: git
-  repo: https://github.com/Moeyua/moeyua.github.io
+  repo: https://github.com/moeyua/moeyua.github.io
   branch: gh-pages
 
 highlight:
