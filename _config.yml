@@ -95,7 +95,7 @@ theme_config:
   # Choose the comment service according to your need.
   # Please do not use the two services at the same time.
   livere: # [data-uid] on livere.com
-  disqus: moeyua # [short_name] on disqus.com
+  disqus: # [short_name] on disqus.com
   dove: # For fun ONLY. Set to true to 'disable' comments on your site.
 
   # Set true to show the page indicator.
@@ -103,7 +103,11 @@ theme_config:
 
   # Set true to show category or tags behind post titles
   showCategories: true
-  showTags: true
+  showTags: false
+
+  # Set true to show category or tags on sidebar
+  tags: false
+  categories: true
 
   # Color scheme
   themeStyle: light # light/dark
