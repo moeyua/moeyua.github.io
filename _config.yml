@@ -156,5 +156,5 @@ feed:
 # For syntax highlighting
 prism_plugin:
   mode: "preprocess"
-  theme: "tomorrow"
-  line_number: true
+  theme: "material-dark"
+  line_number: false
