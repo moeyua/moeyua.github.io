@@ -8,7 +8,6 @@ tags:
   - Flexbox
   - 布局
 date: 2022-03-05 14:27:05
-summary: 本文是 Ahmad Shadeed 的博客文章 《Grid for layout, Flexbox for components》 的翻译。
 categories: 译文
 ---
 本文是 [Ahmad Shadeed](https://ishadeed.com/) 的博客文章 [Grid for layout, Flexbox for components](https://ishadeed.com/article/grid-layout-flexbox-components/) 的翻译。

@@ -5,7 +5,6 @@ tags:
   - TypeScript
   - Vue
 date: 2022-06-02 15:27:41
-summary: 在选项式 API 或者不使用 <script setup> 时我们可以使用 PropType 这个工具类型来标记更复杂的 prop 类型
 categories: 技术文档
 ---
 

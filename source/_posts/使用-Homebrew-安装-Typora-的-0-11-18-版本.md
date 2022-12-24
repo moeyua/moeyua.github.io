@@ -5,7 +5,6 @@ tags:
   - Homebrew
   - Typora
 date: 2022-06-27 18:45:39
-summary: 记录一下如何使用 Homebrew 下载 Typora，改方法理论上同样适用于其他 Homebrew 不提供的旧版本软件。
 categories: 技术文档
 ---
 
