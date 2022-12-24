@@ -7,13 +7,13 @@ title: Moeyua
 subtitle:
 description:
 author: Moeyua
-email:
+email: moeyua13@icloud.com
 language: zh-cn
 timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://moeyua.github.io/
+url: http://moeyua.com
 root: /
 permalink: :year/:month/:day/:title/
 tag_dir: tags
@@ -81,6 +81,33 @@ disqus_shortname:
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
 theme: typography
+theme_config:
+  title_primary: "巷角餐馆" # the bigger text
+  title_secondary: "Moeyua" # the smaller text
+  keywords:
+
+  twitter: EvodMoeyua #username
+  rss: atom.xml
+  weibo: #username/id
+  instagram: #username
+  github: moeyua #username
+
+  # Choose the comment service according to your need.
+  # Please do not use the two services at the same time.
+  livere: # [data-uid] on livere.com
+  disqus: moeyua # [short_name] on disqus.com
+  dove: # For fun ONLY. Set to true to 'disable' comments on your site.
+
+  # Set true to show the page indicator.
+  showPageCount: true
+
+  # Set true to show category or tags behind post titles
+  showCategories: true
+  showTags: true
+
+  # Color scheme
+  themeStyle: light # light/dark
+
 exclude_generator:
 
 # Deployment
@@ -129,5 +156,5 @@ feed:
 # For syntax highlighting
 prism_plugin:
   mode: "preprocess"
-  theme: "default"
+  theme: "tomorrow"
   line_number: true
