@@ -148,9 +148,9 @@
     <category term="译文" scheme="http://moeyua.com/categories/%E8%AF%91%E6%96%87/"/>
     
     
-    <category term="IndexedDB" scheme="http://moeyua.com/tags/IndexedDB/"/>
-    
     <category term="JavaScript" scheme="http://moeyua.com/tags/JavaScript/"/>
+    
+    <category term="IndexedDB" scheme="http://moeyua.com/tags/IndexedDB/"/>
     
   </entry>
   
@@ -259,9 +259,9 @@
     <category term="技术文档" scheme="http://moeyua.com/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/"/>
     
     
-    <category term="hexo" scheme="http://moeyua.com/tags/hexo/"/>
-    
     <category term="JavaScript" scheme="http://moeyua.com/tags/JavaScript/"/>
+    
+    <category term="hexo" scheme="http://moeyua.com/tags/hexo/"/>
     
   </entry>
   
