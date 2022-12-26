@@ -114,6 +114,9 @@ theme_config:
 
 exclude_generator:
 
+# google analytics id
+google_analytics: G-WZQCP5GPTR
+
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
