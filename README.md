@@ -18,16 +18,8 @@ hexo s --debug
 hexo g -d
 ```
 
-# 分类 categories
-- 随便写点 
-- 他山之石
-- 言論
-- 技术文档
-- 疑难杂症
-- 笔记
-- 译文
-
 文章标题的级别为 h3，文章内容的标题请从 h4 开始。
 
 # TODO
 - ~~修改主题~~
+- Github Action
