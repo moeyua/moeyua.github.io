@@ -31,3 +31,4 @@ hexo g -d
 
 # TODO
 - ~~修改主题~~
+- Github Action
