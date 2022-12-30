@@ -1,0 +1,383 @@
+<!DOCTYPE html><html lang="zh-CN"><head><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-WZQCP5GPTR"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-WZQCP5GPTR');
+
+</script><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>【译文】Grid 用于布局, Flexbox 用于组件 · Moeyua</title><meta name="description" content="blog html css javascript js vue macOS 前端 frontEnd"><meta name="og:description" content="blog html css javascript js vue macOS 前端 frontEnd"><meta name="twitter:site" content="Moeyua"><meta name="twitter:title" content="【译文】Grid 用于布局, Flexbox 用于组件"><meta name="twitter:card" content="summary"><meta name="keywords" content=""><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="stylesheet" href="/css/style.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-material-dark.css" type="text/css"></head><body><div class="container" id="stage"><div class="row"><div class="col-sm-3 col-xs-12 side-container invisible" id="side-bar"><div class="vertical-text site-title"><h3 class="site-title-small" tabindex="-1"><a class="a-title" href="/">Moeyua</a></h3><h1 class="site-title-large" tabindex="-1"><a class="a-title" href="/">巷角餐馆</a></h1><!--h6(onclick="triggerSiteNav()") Trigger--></div><br class="visible-lg visible-md visible-sm"><div class="site-title-links" id="site-nav"><ul><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/categories">分类</a></li><li><a href="/about/index.html">关于</a></li><li><a href="/links/index.html">链接</a></li><li class="soc"><a href="https://github.com/moeyua" target="_blank" rel="noopener noreferrer" aria-label="Github"><i class="fa fa-github">&nbsp;</i></a><a href="https://twitter.com/EvodMoeyua" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa fa-twitter">&nbsp;</i></a><a href="http://moeyua.com/atom.xml" target="_blank" rel="noopener noreferrer" aria-label="RSS"><i class="fa fa-rss">&nbsp;</i></a></li></ul><div class="visible-lg visible-md visible-sm site-nav-footer"><br class="site-nav-footer-br"><footer><p>&copy;&nbsp;2022&nbsp;<a target="_blank" href="http://moeyua.com" rel="noopener noreferrer">Moeyua</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div><div class="col-sm-9 col-xs-12 main-container invisible" id="main-container"><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post-container"><p class="post-title"><a>【译文】Grid 用于布局, Flexbox 用于组件</a></p><p class="post-meta"><span class="date meta-item">发布于&nbsp;2022-03-05</span><span class="meta-item"><span>&nbsp;</span><a class="a-tag" href="/categories/译文/" title="译文"># 译文</a><span>&nbsp;</span></span></p><p class="post-abstract"><p>本文是 <a target="_blank" rel="noopener" href="https://ishadeed.com/">Ahmad Shadeed</a> 的博客文章 <a target="_blank" rel="noopener" href="https://ishadeed.com/article/grid-layout-flexbox-components/">Grid for layout, Flexbox for components</a> 的翻译。</p>
+<p>3 月 5 号开始翻译，摸了 3 个月终于翻译完了，下次还敢（不是</p>
+<hr>
+<p>我的弟弟是一名刚毕业的软件工程师，现在他正在做前端开发相关的实习岗位。他以前学过 Grid 和 flexbox，但是我发现和我经常网上看到的情况一样，他在布局的时候使用 Grid 还是 flexbox 之间摇摆不定。举个例子，他尝试使用 Grid 布局去开发一个网站的 header，但是当他使用了 <code>grid-column</code> 属性的时候他发现过程好像并不像想象中那么顺利，所以他只能不停地调整来让页面看起来和设计稿一致。</p>
+<p>说句实话，我不太喜欢这样子，所以我试着去找一些关于这方面的资料来让他了解 grid 和 flexbox 之间的区别，最好还能带上几个例子，但可惜的是我一无所获。所以我尝试写了一篇涵盖了这个主题所有内容的文章，希望大家能够从中获益。</p>
+<h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>在深入探讨概念和实例之前，首先要确保你了解 CSS grid 和 flexbox 的主要区别。CSS Grid是一个拥有「行」和「列」概念的多维布局模块。Flexbox 可以将其子项布局成列或行，但不能同时进行（译者注：可以理解为一维）。</p>
+<p>如果你还不了解关于 CSS grid 和 flexbox 相关的知识，我非常建议你去阅读这篇 <a target="_blank" rel="noopener" href="https://ishadeed.com/article/learn-box-alignment/">可视化文章</a>。如果你已经了解了这些内容那就太棒了，接下来我们就将深入了解它们直接的区别，以及如何使用它们。</p>
+<h4 id="Grid-和-Flexbox-之间的不同点"><a href="#Grid-和-Flexbox-之间的不同点" class="headerlink" title="Grid 和 Flexbox 之间的不同点"></a>Grid 和 Flexbox 之间的不同点</h4><p>首先我需要澄清一点，关于「何时使用 CSS Grid 或 flexbox」这里没有一个非常明确的界线。还有一点就是，没有「使用这种方法 <strong>正确</strong> 或者 <strong>错误</strong>」这种说法。这篇文章是推荐在特定的使用情况下使用某种技术的指南，我将会讲述一些基本概念，然后通过一些例子说明这些概念，剩余的就需要靠你自己去探索和实验了。</p>
+<pre class=" language-CSS"><code class="language-CSS">/* Flexbox 容器 */
+.wrapper {
+  display: flex;
+}
+
+/* Grid 容器 */
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 16px;
+}
+</code></pre>
+<p><img src="https://s2.loli.net/2022/03/05/TR6MeZLhgxrW7ED.png" alt="grid-vs-flexbox"></p>
+<p>发现了什么吗？Flexbox 是在一行内布局自己的元素，CSS grid 使其转化为拥有行和列的表格。Flexbox 是在行内进行对齐的，当然如果我们愿意也可以在列内。</p>
+<pre class=" language-CSS"><code class="language-CSS">/* Flexbox 容器 */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+</code></pre>
+<p><img src="https://s2.loli.net/2022/03/05/Eo3KZHtYLcURTwv.png" alt="grid-vs-flexbox-1"></p>
+<h4 id="如何决定使用哪种布局呢"><a href="#如何决定使用哪种布局呢" class="headerlink" title="如何决定使用哪种布局呢"></a>如何决定使用哪种布局呢</h4><p>在 CSS grid 和 flexbox 之间做决定有时会很困难，特别是刚入门 CSS 的新手，我非常理解这种心情，我在开始选择之前会问自己下面这几个问题：</p>
+<ul>
+<li><p>组件内的元素是如何展示的？行内还是行和列？</p>
+</li>
+<li><p>组件在不同种类的屏幕大小下期望的展示方式是什么？</p>
+</li>
+</ul>
+<p>如果组件的子元素的排列方式是行内，那大多数情况最好的方案应该就是 flexbox 了。看看下面这个例子：</p>
+<p><img src="https://s2.loli.net/2022/03/05/msqhfZrGS3toQ9Y.png" alt="decide-1"></p>
+<p>如果是行和列的话，CSS grid 应该是这种情况下的方案。</p>
+<p><img src="https://s2.loli.net/2022/03/05/APLnzX29OUEB5iu.png" alt="decide-2"></p>
+<p>现在我已经说明了它们之间主要的不同点，现在让我们看一下更加特殊的例子来学习如何决定这两种布局。</p>
+<h4 id="一些案例和实例"><a href="#一些案例和实例" class="headerlink" title="一些案例和实例"></a>一些案例和实例</h4><p>在下面的章节中，我将详细讨论 flexbox 和 grid 的不同使用情况。</p>
+<h5 id="CSS-Grid"><a href="#CSS-Grid" class="headerlink" title="CSS Grid"></a>CSS Grid</h5><h6 id="两栏式布局（Main-And-Sidebar）"><a href="#两栏式布局（Main-And-Sidebar）" class="headerlink" title="两栏式布局（Main And Sidebar）"></a>两栏式布局（Main And Sidebar）</h6><p>当你需要一个两栏式布局（一个侧边栏和主要内容）时，CSS grid 就是最好的选择，请看下面这个例子：</p>
+<p><img src="https://s2.loli.net/2022/03/07/7RwjJ92avFyO5VX.png" alt="grid-use-1"></p>
+<p>这里是实现代码：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>aside</span><span class="token punctuation">></span></span>Sidebar<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>aside</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">></span></span>Main<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 800px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector"><span class="token class">.wrapper</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token number">200</span>px <span class="token number">1</span>fr<span class="token punctuation">;</span>
+    <span class="token property">grid-gap</span><span class="token punctuation">:</span> <span class="token number">16</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">aside </span><span class="token punctuation">{</span>
+    <span class="token property">align-self</span><span class="token punctuation">:</span> start<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>如果 <code>&lt;aside&gt;</code> 元素没有使用 <code>align-self</code> 属性，那么它的高度就会无视内容，始终等于 <code>&lt;main&gt;</code> 元素。</p>
+<h6 id="Cards-Grid（网格卡片）"><a href="#Cards-Grid（网格卡片）" class="headerlink" title="Cards Grid（网格卡片）"></a>Cards Grid（网格卡片）</h6><p>正如我们在文章开头所说的，布局 cards grid 的最佳方式从 CSS grid 的名字就不言而喻了。</p>
+<p><img src="https://s2.loli.net/2022/03/07/wPGfl194NcrRhFj.png" alt="grid-use-2"></p>
+<p>这里是我实现这个布局的代码：</p>
+<pre class=" language-CSS"><code class="language-CSS">.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 16px;
+}
+</code></pre>
+<p>每一列的宽度最小应该是 <code>200px</code>，如果没有足够的空间则会自动换到下一行。需要注意的是，如果视口（viewport）的宽度小于 <code>200px</code> ，上述写法会导致在水平方向上发生滚动。</p>
+<p>一个比较简单的解决方式是只有在 <code>viewport</code> 的宽度足够时上述代码才会生效，像下面这样：</p>
+<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 800px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector"><span class="token class">.wrapper</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token function">repeat</span><span class="token punctuation">(</span>auto-fit, <span class="token function">minmax</span><span class="token punctuation">(</span><span class="token number">200</span>px, <span class="token number">1</span>fr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">grid-gap</span><span class="token punctuation">:</span> <span class="token number">16</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h6 id="Section-Layout"><a href="#Section-Layout" class="headerlink" title="Section Layout"></a>Section Layout</h6><p>在下面的这个例子中，我们可以使用两次 grid 布局来实现。首先我们使用 grid 布局将整个区域分成两个部分（侧边栏部分和表单部分），接着我们就可以使用 grid 将表单进行布局。</p>
+<p><img src="https://s2.loli.net/2022/03/09/lZfCT9dbjVUqLex.png" alt="grid-use-3"></p>
+<p>I can’t emphasis how CSS grid is perfect for that. 下面是 CSS 实现代码：</p>
+<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 800px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector"><span class="token class">.wrapper</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token number">200</span>px <span class="token number">1</span>fr<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token selector"><span class="token class">.form-wrapper</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token number">1</span>fr <span class="token number">1</span>fr<span class="token punctuation">;</span>
+    <span class="token property">grid-gap</span><span class="token punctuation">:</span> <span class="token number">16</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token selector"><span class="token class">.form-message</span>,
+  <span class="token class">.form-button</span> </span><span class="token punctuation">{</span>
+    <span class="token property">grid-column</span><span class="token punctuation">:</span> <span class="token number">1</span> /<span class="token number">3</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* 让它们充满整个宽度 */</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>这个例子引用自我在 Envato 的 <a target="_blank" rel="noopener" href="https://webdesign.tutsplus.com/tutorials/how-to-build-web-form-layouts-with-css-grid--cms-28776">这一篇文章</a>，这是一篇关于在 web 开发时如何使用 CSS grid 进行布局的文章，非常值得一读。</p>
+<h5 id="CSS-Flexbox"><a href="#CSS-Flexbox" class="headerlink" title="CSS Flexbox"></a>CSS Flexbox</h5><h6 id="网站导航"><a href="#网站导航" class="headerlink" title="网站导航"></a>网站导航</h6><p>在 90% 的情况下，网站的导航栏都应该使用 CSS flexbox 进行开发。它们最大的共同之处就是在左边有一个 logo，导航的部分都在右边。这种情况非常适用于 flexbox。</p>
+<p><img src="https://s2.loli.net/2022/03/09/mhKH4MjieyZ3uc5.png" alt="flexbox-use-1"></p>
+<p>要想实现上面这个例子，你只需要按照下面的方式进行设置：</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.site-header</span> </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>同样的，上述代码也可以用在下面的这种设计中。</p>
+<p><img src="https://s2.loli.net/2022/03/09/dS1gIjmuVKABCFN.png" alt="flexbox-use-2"></p>
+<p>你应该注意到导航栏的结构发生了一点变化，但是子元素之间的间距仍由 <code>ustify-content</code> 属性决定。</p>
+<h6 id="操作列表"><a href="#操作列表" class="headerlink" title="操作列表"></a>操作列表</h6><p>当你听到列表的时候第一反应一定是垂直排列的列表。这里特别说明一下，一个列表也可以在一行内排列，所以各位不要搞错。</p>
+<p>关于操作列表的例子我们可以参考 Facebook 或者 Twitter。操作列表由几个操作按钮组成。我们看看下面的这张截图吧：</p>
+<p><img src="https://s2.loli.net/2022/03/09/7jLgqSUGeJiTKuZ.png" alt="flexbox-use-3"></p>
+<p>就像你看到的那样，所有元素之间彼此相邻，而且它们水平分布。Flexbox 简直是最完美的选择，这也是它的核心用途之一。</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.action-list</span> </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.action-list_item</span> </span><span class="token punctuation">{</span>
+  <span class="token property">flex</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* 让所有子元素扩大，使得它们能够平分所有空间 */</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>另一个类似的用法就是用作弹窗的标题和操作按钮。<br>不管弹窗页脚 <code>footer</code> 还是页眉 <code>header</code> 的子元素全都是在行内排列，就像你看到的，他们之间的空隙如下所示：<br><img src="https://s2.loli.net/2022/03/14/NfznIZOB9DGk1b5.png" alt="flexbox-use-4"><br>对于弹窗的页眉来说，下面这种写法就能够满足需要：</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.modal-header</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>页脚对于我们来说可能有一些不同的地方。「取消」按钮需要将 <code>margin</code> 设置为 <code>auto</code> 来将它放置到右边。关于这一点我写了一篇详细介绍这方面内容的 [文章]（<a target="_blank" rel="noopener" href="https://ishadeed.com/article/auto-css/">https://ishadeed.com/article/auto-css/</a> 。</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.cancel_action</span> </span><span class="token punctuation">{</span>
+    <span class="token property">margin-left</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><code>.cancel_action</code> 可能在这里不是一个好的命名方式，但是在这篇文章里我并不打算详细说明有关 CSS 的命名规则。</p>
+<h6 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h6><p>一个输入框旁边紧挨着一个按钮的组合可以说是 Flexbox 的完美案例了。<br>请看下面这个例子：</p>
+<p><img src="https://s2.loli.net/2022/03/14/A9v8msD6bk3WzTU.png" alt="flexbox-use-5"></p>
+<p>在第一个表单当中，输入框占据了所有的剩余空间，所以我们需要给它设置一个动态的宽度。同样的，第二个表单（Facebook 的 Messenger）也是一样，文字输入框占据了所有的剩余位置。让我们试着模仿一下。</p>
+<p><img src="https://s2.loli.net/2022/03/14/rmgPZoAE6tlJ3Mb.png" alt="flexbox-use-6"></p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.input</span> </span><span class="token punctuation">{</span>
+  <span class="token property">flex</span><span class="token punctuation">:</span> <span class="token number">1</span> <span class="token number">1</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>主要注意的是，如果我们没有在文字输入框上设置 <code>flex: 1 1 auto</code>，那么输入框就不会自动填充满整个剩余空间。</p>
+<h6 id="跟帖回复"><a href="#跟帖回复" class="headerlink" title="跟帖回复"></a>跟帖回复</h6><p>Flexbox 的另一个比较通用的例子就是「跟帖回复」，比如下面这个例子：</p>
+<p><img src="https://s2.loli.net/2022/03/16/O24yCjo6KvsnUfc.png" alt="flexbox-use-7"></p>
+<p>这里有用户的头像和评论本身，评论模块占据了容器的所有剩余空间，用 flexbox 可以完美的实现这种布局。</p>
+<h6 id="卡片组件"><a href="#卡片组件" class="headerlink" title="卡片组件"></a>卡片组件</h6><p>卡片组件的种类有非常多，但是一般来说最常见的还是下面例子中的这种设计：</p>
+<p><img src="https://s2.loli.net/2022/03/16/fXLsipQD7mkBV52.png" alt="flexbox-use-8"></p>
+<p>左边的例子中，我们将 flex 的方向设置为了 <code>column</code>，所以卡片的子元素是叠在一起的。相反，右边的方向是 <code>row</code> ，而且 flexbox 默认的方向就是 row，这一点千万不要忘记。</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.card</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 800px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector"><span class="token class">.card</span> </span><span class="token punctuation">{</span>
+        <span class="token property">flex-direction</span><span class="token punctuation">:</span> row<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>另外一个比较常见的变种是在卡片中有一个图标，而且会有一个文字标签紧挨在下面。它可能是一个按钮、一个链接、或者就仅仅是装饰而已。让我们看看下面这个例子：</p>
+<p><img src="https://s2.loli.net/2022/03/16/3GD6qXxuSekcLBd.png" alt="flexbox-use-9"></p>
+<p>值得注意的是图标和文本标签在水平和垂直方向是居中的。感谢 flexbox，让我们能够很简单的实现这种布局。</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.card</span> </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>行内的样式是默认的，我们只需要删除 <code>flex-direction: column</code> 让它恢复到默认的值 &lt;row&gt; 就可以了。 </p>
+<h6 id="标签页-x2F-底部菜单"><a href="#标签页-x2F-底部菜单" class="headerlink" title="标签页 &#x2F; 底部菜单"></a>标签页 &#x2F; 底部菜单</h6><p>当一个元素的宽度需要始终等于屏幕宽度，而且它的子元素需要填满所有的可用空间，这时 flexbox 就是我们的最佳选择。</p>
+<p><img src="https://s2.loli.net/2022/03/17/BvNJwm58njPo1db.png" alt="flexbox-use-10"></p>
+<p>在上面这个例子中，所有的子元素都应该充满可用空间，而且所有子元素的宽度相同。我们只需要将容器的 display 设置为 <code>flex</code> 就可以很轻松的实现这一布局了。</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.tabs_item</span> </span><span class="token punctuation">{</span>
+  <span class="token property">flex-grow</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>这种方式被 React Native 框架用来在移动端创建 Tab 菜单。这里有一段 React Native 的示例代码展示了和上面一样的内容。这里的代码是从 <a target="_blank" rel="noopener" href="https://reactnative.dev/docs/flexbox">这里</a> 借鉴来的。</p>
+<pre class=" language-react"><code class="language-react">import React from "react";
+import { View } from "react-native";
+
+export default FlexDirectionBasics = () => {
+  return (
+    <View style=>
+      <View
+        style=
+      />
+      <View
+        style=
+      />
+      <View
+        style=
+      />
+    </View>
+  );
+};
+</code></pre>
+<h6 id="功能列表"><a href="#功能列表" class="headerlink" title="功能列表"></a>功能列表</h6><p>关于 flexbox 最喜欢的一点就是它能够随意翻转元素的方向。flexbox 默认的方向是 <code>row</code> ，但是我们可以像下面这样转换一下：</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
+    <span class="token property">flex-direction</span><span class="token punctuation">:</span> row-reverse<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>在下面这个例子中我们能看到偶数项被翻转，这就是通过上面的方式实现的，非常实用。</p>
+<p><img src="https://s2.loli.net/2022/04/21/YoIa5zwRxBjuXry.png" alt="flexbox-use-11"></p>
+<h6 id="居中内容"><a href="#居中内容" class="headerlink" title="居中内容"></a>居中内容</h6><p>然后我们设想这样一种情况：我们有一个很重要的部分，这个部分的内容需要被垂直且水平居中。水平居中我们能够使用文本对齐简单的实现。</p>
+<p><img src="https://s2.loli.net/2022/04/21/lCbLxvm29Bq67wT.png" alt="flexbox-use-12"></p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.hero</span> </span><span class="token punctuation">{</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>但是如何使用 flexbox 将元素垂直居中呢？这正是我们需要实现的：</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.hero</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* 水平居中元素 */</span>
+    <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* 垂直居中元素 */</span>
+    <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="CSS-Grid-和-Flexbox-的结合"><a href="#CSS-Grid-和-Flexbox-的结合" class="headerlink" title="CSS Grid 和 Flexbox 的结合"></a>CSS Grid 和 Flexbox 的结合</h4><p>不仅每个布局模块有自己的使用例，我们甚至可以将他们结合起来使用。当我考虑如何将这两种布局方式结合在一起的时候，我脑海中的第一个想法就是卡片列表。使用 Grid 来布局卡片，使用 flexbox 来布局卡片组件自身。</p>
+<p><img src="https://s2.loli.net/2022/04/28/yWjkASTfL8zbaVC.png" alt="grid-and-flex"></p>
+<p>上面的这个布局有以下几点需求：</p>
+<ul>
+<li><p>每一行的卡片高度应该保持相等；</p>
+</li>
+<li><p>不管卡片高度如何，Read more 按钮应该始终在卡片的底部；</p>
+</li>
+<li><p>Grid  应当使用 <code>minimal()</code> 函数。</p>
+</li>
+</ul>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>article</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>card<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sunrise.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>card__content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span><span class="token comment" spellcheck="true">&lt;!-- Title --></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token comment" spellcheck="true">&lt;!-- Desc --></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>card_link<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Read more<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>article</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+</code></pre>
+<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 500px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector"><span class="token class">.wrapper</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token function">repeat</span><span class="token punctuation">(</span>auto-fill, <span class="token function">minmax</span><span class="token punctuation">(</span><span class="token number">200</span>px, <span class="token number">1</span>fr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">grid-gap</span><span class="token punctuation">:</span> <span class="token number">16</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.card</span> </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* [1] */</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* [2] */</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.card__content</span> </span><span class="token punctuation">{</span>
+  <span class="token property">flex-grow</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* [3] */</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* [4] */</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.card__link</span> </span><span class="token punctuation">{</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* [5] */</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>现在让我来解释一下上面的 CSS。</p>
+<ol>
+<li>将卡片设置成 flexbox 容器</li>
+<li>排列方向为纵向，也就是说卡片的元素是通过栈的方式进入的</li>
+<li>让卡片的内容扩大并充满所有剩余空间</li>
+<li>将卡片内容设置为 flexbox 容器</li>
+<li>最后，使用 <code>margin-top: auto</code> 将 链接 推入栈中。这样不管卡片高度是多少它都会保持在最底部。</li>
+</ol>
+<p>正如你所看到的，结合 CSS grid 和 flexbox 并不是很困难。这两种方式可以给我们带来许多种实现 web 布局的方式。我们应该正确的使用它们，而且<strong>只在</strong>像上述需要的情况去结合它们。</p>
+<h4 id="支持旧版本的浏览器的回退方案"><a href="#支持旧版本的浏览器的回退方案" class="headerlink" title="支持旧版本的浏览器的回退方案"></a>支持旧版本的浏览器的回退方案</h4><h5 id="通过-CSS-supports"><a href="#通过-CSS-supports" class="headerlink" title="通过 CSS @supports"></a>通过 CSS <code>@supports</code></h5><p>大概在几个月之前，我得到了一条推特回复说我的网站在 IE11 上崩溃了。在检查过后我发现了一个奇怪的现象。所有的网站内容都被压缩都了左上角的区域。我的网站无法使用了！</p>
+<p><img src="https://ishadeed.com/assets/grid-flex/ishadeed-ie11.png" alt="ishadeed-ie11"></p>
+<p>是的，这就是我的网站——一个前端开发工程师的网站，在 IE11 上。首先让我感到困惑的是，这是如何发生的？我记得 CSS grid 是支持 IE11 的，但是这是微软发布的旧版本。解决方法非常简单，那就是使用 <code>@supports</code> 只在新的浏览器中使用 CSS grid。</p>
+<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@supports</span> <span class="token punctuation">(</span><span class="token property">grid-area</span><span class="token punctuation">:</span> auto<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">body </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>让我解释一下。我使用 <code>grid-area</code> 是因为它只在新的 CSS grid 规范中被支持，从2017年3月到今天。由于IE不支持 <code>@supports</code> 查询，整个规则将被忽略。因此，新的CSS网格将只用于支持的浏览器。</p>
+<h5 id="使用-Flexbox-作为-CSS-Grid-的回退方案"><a href="#使用-Flexbox-作为-CSS-Grid-的回退方案" class="headerlink" title="使用 Flexbox 作为 CSS Grid 的回退方案"></a>使用 Flexbox 作为 CSS Grid 的回退方案</h5><p>flexbox 不适合用于展示网格布局中的项目，但是这并不意味着它不能当作备用方案。你可以使用 flexbox 来作为 不支持 CSS grid 浏览器的备用方案。我曾经开发了一个<a target="_blank" rel="noopener" href="https://shadeed.github.io/grid-to-flex/">工具l</a>用来解决这个问题。</p>
+<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@mixin</span> <span class="token function">grid</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
+
+  <span class="token atrule"><span class="token rule">@supports</span> <span class="token punctuation">(</span><span class="token property">grid-area</span><span class="token punctuation">:</span> auto<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+    <span class="token property">grid-gap</span><span class="token punctuation">:</span> <span class="token number">16</span>px <span class="token number">16</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@mixin</span> <span class="token function">gridAuto</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">margin-left: -16px;
+
+  > * </span><span class="token punctuation">{</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">16</span>px<span class="token punctuation">;</span>
+    <span class="token property">margin-left</span><span class="token punctuation">:</span> <span class="token number">16</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 320px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">> * </span><span class="token punctuation">{</span>
+      <span class="token selector">width: calc((99% / #</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">}</span><span class="token selector">) - 16px);
+      flex: 0 0 calc((99% / #</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">)</span> - <span class="token number">16</span>px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 768px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">> * </span><span class="token punctuation">{</span>
+      <span class="token selector">width: calc((99% / #</span><span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">}</span><span class="token selector">) - 16px);
+      flex: 0 0 calc((99% / #</span><span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">)</span> - <span class="token number">16</span>px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token atrule"><span class="token rule">@supports</span> <span class="token punctuation">(</span><span class="token property">grid-area</span><span class="token punctuation">:</span> auto<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+    <span class="token selector">grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-left: 0;
+
+    > * </span><span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+      <span class="token property">margin-left</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>上面的回退代码通过下面所述的方式运行：</p>
+<ol>
+<li>添加 <code>display: flex</code> 和 <code>flex-wrap: wrap</code> 使元素换行；</li>
+<li>检查 CSS grid 是否被支持，如果支持，那么就会使用 <code>display: grid</code>；</li>
+<li>通过使用 <code>&gt; *</code>选择器,我们可以选择容器的直接子后代。在选择完成后，我们就可以给它们每一个都添加一个特殊的宽度或者大小了。</li>
+<li>当然，它们之间的间隙是必须的，如果浏览器支持 CSS grid，我们将会用 <code>grid-gap</code> 来充当间隙。</li>
+</ol>
+<p>这里是一个使用 Sass mixin 的例子：</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.wrapper</span> </span><span class="token punctuation">{</span>
+  <span class="token atrule"><span class="token rule">@include</span> <span class="token function">grid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+  <span class="token atrule"><span class="token rule">@include</span> <span class="token function">gridAuto</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><a target="_blank" rel="noopener" href="https://codepen.io/shadeed/pen/XWrLmYe">Demo</a></p>
+<h4 id="如果-Grid-和-Flexbox-都无法正常使用"><a href="#如果-Grid-和-Flexbox-都无法正常使用" class="headerlink" title="如果 Grid 和 Flexbox 都无法正常使用"></a>如果 Grid 和 Flexbox 都无法正常使用</h4><p>当我和我弟弟在进行代码评审的时候，我注意到了几个 CSS grid 和 flexbox 都会错误的使用方式，我认为将它们作为重点写出来很有必要。</p>
+<h5 id="使用-CSS-Grid-来布局网站头部区域"><a href="#使用-CSS-Grid-来布局网站头部区域" class="headerlink" title="使用 CSS Grid 来布局网站头部区域"></a>使用 CSS Grid 来布局网站头部区域</h5><p>这个问题是让我写下这篇文章的动机之一。我注意到我的弟弟使用 CSS grid 来实现网站的头部区域。</p>
+<p>他辩解道“CSS grid 实在是太复杂，太难了“等等。由于使用了不正确的布局方法，他得到了一个想法，认为这是 CSS grid 太复杂造成的。其实不然，他所有的困惑都来自于把它用在不合适的地方的事实。</p>
+<p>看一下我注意到的这个例子：</p>
+<p><img src="https://s2.loli.net/2022/05/07/sCj3tBUTWmLZSrv.png" alt="incorrect-use-1"></p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.site-header</span> </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token number">1</span>fr <span class="token number">1</span>fr <span class="token number">1</span>fr <span class="token number">1</span>fr <span class="token number">1</span>fr <span class="token number">1</span>fr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.site-nav</span> </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token number">1</span>fr <span class="token number">1</span>fr <span class="token number">1</span>fr <span class="token number">1</span>fr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>CSS grid 被使用了两次，第一次是用于整个标题，第二次是用于导航。他用 <code>grid-column</code> 来微调元素之间的间距，还有其他一些奇怪的东西，我记不起来了，但是最重要的你应该明白了吧！</p>
+<h5 id="使用-CSS-Grid-在标签上"><a href="#使用-CSS-Grid-在标签上" class="headerlink" title="使用 CSS Grid 在标签上"></a>使用 CSS Grid 在标签上</h5><p>CSS grid 的另一个不正确的用法是将其应用于标签组件。请看下面的模拟图。</p>
+<p><img src="https://s2.loli.net/2022/05/07/QGpurMsVOt8RUwN.png" alt="incorrect-use-2"></p>
+<p>下面是错误的 CSS 代码：</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.tabs-wrapper</span> </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token number">1</span>fr <span class="token number">1</span>fr <span class="token number">1</span>fr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>从上面的代码中，我可以看到，开发者假设标签数只有三个。因此，他用 <code>1fr 1fr 1fr</code> 来布置列。如果列数发生变化，布局就失效了。</p>
+<h5 id="过度使用-Flexbox-或者-Grid"><a href="#过度使用-Flexbox-或者-Grid" class="headerlink" title="过度使用 Flexbox 或者 Grid"></a>过度使用 Flexbox 或者 Grid</h5><p>记住，旧的布局方法可能是完美的方式。过度使用 flexbox 或 grid 会使你的 CSS 的复杂程度随着时间而增加。我并不是说它们很复杂，而是像本文中的例子所解释的那样，在正确的情况下<strong>正确地</strong>使用它们会好很多。</p>
+<p>例如，你有如下的主要部分，要求将其所有内容水平居中。</p>
+<p><img src="https://s2.loli.net/2022/05/07/yB3ocaDu6G5RvmY.png" alt="img"></p>
+<p>我们可以通过 <code>text-align: center</code> 来实现这种布局，那么这个时候我们为什么要去使用 felxbox 这种更复杂的方式？</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>关于使用 CSS Grid 和 Flexbox 之间的区别，我们已经说了很多了。这个话题我想了很久，我很高兴有机会写这个话题。如果有任何问题请不要犹豫，通过电子邮件或twitter <a target="_blank" rel="noopener" href="https://twitter.com/shadeed9">@shadeed9</a> 提供反馈!</p>
+<p>感谢你的阅读！</p>
+</p></div><div class="share"><span>分享到</span>&nbsp;<span class="soc"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></span><span class="soc"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></span><span class="soc"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=http://moeyua.com/2022/03/05/b4e0d0acfd83/%20Moeyua%20【译文】Grid 用于布局, Flexbox 用于组件"></a></span></div><div class="pagination"><p class="clearfix"><span class="pre pagbuttons"><a role="navigation" href="/2022/06/02/1c1d9a47c59f/" title="使用 TypeScript 为 Vue 组件的 prop 标注类型"><i class="fa fa-angle-double-left"></i>&nbsp;上一篇: 使用 TypeScript 为 Vue 组件的 prop 标注类型</a></span><span>&nbsp;</span><span class="next pagbuttons"><a role="navigation" href="/2022/01/14/172a447017ea/" title="【译文】IndexedDB 为什么这么慢？如何更好的使用呢？">下一篇: 【译文】IndexedDB 为什么这么慢？如何更好的使用呢？&nbsp;<i class="fa fa-angle-double-right"></i></a></span></p></div></div></div></div><div class="visible-xs site-bottom-footer"><footer><p>&copy;&nbsp;2022&nbsp;<a target="_blank" href="http://moeyua.com" rel="noopener noreferrer">Moeyua</a></p><p>Theme&nbsp;<a target="_blank" href="https://github.com/SumiMakito/hexo-theme-typography" rel="noopener noreferrer">Typography</a>&nbsp;by&nbsp;<a target="_blank" href="https://www.keep.moe" rel="noopener noreferrer">Makito</a></p><p>Proudly published with&nbsp;<a target="_blank" href="https://hexo.io" rel="noopener noreferrer">Hexo</a></p></footer></div></div></div></div><script src="/js/jquery-3.1.0.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/typography.js"></script></body></html>

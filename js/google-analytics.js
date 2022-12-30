@@ -20,10 +20,3 @@
 
 // ga("create", "G-WZQCP5GPTR", "auto");
 // ga("send", "pageview");
-window.dataLayer = window.dataLayer || [];
-function gtag() {
-  dataLayer.push(arguments);
-}
-gtag("js", new Date());
-
-gtag("config", "G-WZQCP5GPTR");
