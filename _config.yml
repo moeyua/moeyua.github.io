@@ -15,12 +15,13 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://moeyua.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:month/:day/:hash/
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 permalink_defaults:
+  lang: en
 
 # Directory
 source_dir: source
