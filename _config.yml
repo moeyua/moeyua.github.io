@@ -83,7 +83,7 @@ disqus_shortname:
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
 theme: typography
 theme_config:
-  title_primary: "四叠半房间" # the bigger text
+  title_primary: "四叠半のへや" # the bigger text
   title_secondary: "Moeyua" # the smaller text
   keywords:
 
