@@ -1,6 +1,6 @@
 ---
 title: 使用 Homebrew 安装 Typora 的 0.11.18 版本
-desc: blog html css javascript js vue macOS 前端 frontEnd
+desc:
 tags:
   - Homebrew
   - Typora

@@ -1,6 +1,6 @@
 ---
 title: 从零开始的 RSSHub Docker 私有化部署指南
-desc: blog html css javascript js vue macOS 前端 frontEnd
+desc:
 tags:
   - RSSHub
   - Docker

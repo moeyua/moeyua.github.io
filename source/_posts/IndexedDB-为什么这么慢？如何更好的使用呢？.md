@@ -1,6 +1,6 @@
 ---
 title: 【译文】IndexedDB 为什么这么慢？如何更好的使用呢？
-desc: blog html css javascript js vue macOS 前端 frontEnd
+desc:
 tags:
   - IndexedDB
   - JavaScript

@@ -1,6 +1,6 @@
 ---
 title: 使用 TypeScript 为 Vue 组件的 prop 标注类型
-desc: blog html css javascript js vue macOS 前端 frontEnd
+desc:
 tags:
   - TypeScript
   - Vue

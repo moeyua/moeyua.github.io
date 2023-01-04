@@ -1,6 +1,6 @@
 ---
 title: 给 icarus 主题增加所有文章的字数统计
-desc: blog html css javascript js vue macOS 前端 frontEnd
+desc:
 tags:
   - hexo
   - JavaScript
