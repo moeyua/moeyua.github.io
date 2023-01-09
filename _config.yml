@@ -31,15 +31,18 @@ public_dir: public
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
 relative_link: false
 highlight:
-  enable: false # we will use the prism plugin instead
-  # line_number: true
-  # tab_replace:
+  enable: false
+prismjs:
+  enable: true
+  preprocess: true
+  line_number: true
+  line_threshold: 0
+  tab_replace: ""
 
 # Category & Tag
 default_category: uncategorized
@@ -113,6 +116,11 @@ theme_config:
   # Color scheme
   themeStyle: light # light/dark
 
+  # Prism https://www.jsdelivr.com/package/npm/prismjs
+  prism:
+    version: 1.29.0
+    theme: prism-tomorrow
+
 exclude_generator:
 
 # google analytics id
@@ -160,9 +168,8 @@ feed:
   icon: https://i.loli.net/2021/11/11/luLsADZJ1BogN4v.jpg
   autodiscovery: true
   template:
-
-# For syntax highlighting
-prism_plugin:
-  mode: "preprocess"
-  theme: "material-dark"
-  line_number: false
+# # For syntax highlighting
+# prism_plugin:
+#   mode: "preprocess"
+#   theme: "material-dark"
+#   line_number: false
