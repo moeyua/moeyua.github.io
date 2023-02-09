@@ -15,7 +15,7 @@
     "bulma-stylus": "^0.9.1",
     "hexo": "^6.3.0",
     "hexo-component-inferno": "^2.0.2",
-    "hexo-deployer-git": "^3.0.0",
+    "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category-enhance": "^0.1.6",
     "hexo-generator-feed": "^3.0.0",
@@ -30,6 +30,6 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^0.0.3",
     "inferno": "^8.0.6",
-    "inferno-create-element": "^8.0.5"
+    "inferno-create-element": "^8.0.6"
   }
 }
