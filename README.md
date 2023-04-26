@@ -9,13 +9,17 @@ git submodule update
 
 # 本地运行
 ```zsh
-hexo g
-hexo s --debug
+pnpm dev
+```
+
+# 发布文章
+```zsh
+pnpm post "title"
 ```
 
 # 发布并部署 
 ```zsh
-hexo g -d
+pnpm deploy
 ```
 
 文章标题的级别为 h3，文章内容的标题请从 h4 开始。
