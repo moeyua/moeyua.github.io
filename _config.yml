@@ -114,7 +114,7 @@ theme_config:
   categories: true
 
   # Color scheme
-  themeStyle: light # light/dark
+  themeStyle: dark # light/dark
 
   # Prism https://www.jsdelivr.com/package/npm/prismjs
   prism:
