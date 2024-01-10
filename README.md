@@ -1,3 +1,5 @@
+已迁移至 [astro-theme-typography](https://github.com/moeyua/astro-theme-typography)
+
 # 安装
 ```zsh
 # 安装依赖
